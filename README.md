@@ -24,15 +24,26 @@ Then I connected the local files to my github repository by doing git commands i
 
 
 Performed Deployment to PWS
-edited the settings.py 
+    edited the settings.py by adding the PWS url
+    did git commands to deploy the website into the pws project
+
 Create a diagram that contains the request client to a Django-based web application and the response it gives, and explain the relationship between urls.py, views.py, models.py, and the html file.
+client browser --> urls.py-->views.py-->models.py-->html template-->client browser
+
+the client sends an http request to the django app
+the urls.py file routes the request to the view based on the url
+the views.py file handles the request
+models.py will interact with the database and returns it to the views
+
+the html template will be passed from the view and its response will be sent back to the client
 
 
 Explain the use of git in software development!
-
+git is used by software developers to collaboarte code efficiently with a group, so that when changes are made it can be done smoothly. 
 
 In your opinion, out of all the frameworks available, why is Django used as the starting point for learning software development?
+it is chosen simply because it's beginner friendly, compared to other languages.It also has built in tools for handling common tasks.
+
 Why is the Django model called an ORM?
-
-
+because it is the bridge between the database and python objects. software developers can use python classes in the django model instead of sql queries. 
 
