@@ -6,6 +6,7 @@ def show_main(request):
         'Name_APP' : 'TOKO HITAM,',
         'Name': 'Zakiy',
         'Class': 'KKI'
+        
     }
 
     return render(request, "main.html", context)
