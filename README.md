@@ -45,5 +45,9 @@ In your opinion, out of all the frameworks available, why is Django used as the 
 it is chosen simply because it's beginner friendly, compared to other languages.It also has built in tools for handling common tasks.
 
 Why is the Django model called an ORM?
+<<<<<<< HEAD
 because it is the bridge between the database and python objects. software developers can use python classes in the django model instead of sql queries. 
 
+=======
+because it is the bridge between the database and python objects. software developers can use python classes in the django model instead of sql queries. 
+>>>>>>> 3acff32dd6e0846313ba918f2b255085b551ecce
