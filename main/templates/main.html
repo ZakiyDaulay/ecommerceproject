@@ -1,14 +1,28 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
 {% block content %}
+{% if not products %}
+<p>There are no products in the database.</p>
+{% else %}
+<table>
+  <tr>
+    <th>Product Name</th>
+    <th>Price</th>
+    <th>Description</th>
+  </tr>
 
-<h1>Ecommerce App</h1>
+  {% for product in products %}
+  <tr>
+    <td>{{ product.name }}</td>
+    <td>{{ product.price }}</td>
+    <td>{{ product.description }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endif %}
 
+<br />
 
-<h5>name of App: </h5>
-<p>{{Name_APP }}<p>
-<h5>Name: </h5>
-<p>{{ Name }}<p>
-<h5>Class: </h5>
-<p>{{ Class }}<p>
-
+<a href="{% url 'main:create_product_entry' %}">
+  <button>Add New Product Entry</button>
+</a>
 {% endblock content %}
