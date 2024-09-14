@@ -1,3 +1,4 @@
+ASSIGNNMENT 2 README
 Explain how you implemented the checklist above step-by-step (not just following the tutorial).
 First I created the django project by using various commands in the terminal, which did the following:
 activated and setting up the django environment
@@ -43,3 +44,55 @@ it is chosen simply because it's beginner friendly, compared to other languages.
 
 Why is the Django model called an ORM?
 because it is the bridge between the database and python objects. software developers can use python classes in the django model instead of sql queries.
+
+ASSIGNMENT 3 README
+
+Step-by-Step Explanation:
+
+
+Explain why we need data delivery in implementing a platform.
+
+1.created a new html file called 'base' in the templates folder that will be the base template for the web page
+
+2.added an id model and modified the other models in the models file
+
+3.did model migrations to make sure that all the changes made are migrated
+
+4.edited forms.py  so to make sure that the new models created will be used as the form. it will be able to save new data added as a product entry
+
+5.created a new function in views.py that makes the ability to create a new entry with the input by the user 
+
+6.created a new html file create_product_entry.html to make the actions that setups the webpage to allow the user to add a product entry by submitting a form to the server
+
+7.modified main.html so that the data can be displayed in the webpage and the add product entry button will redirect the user to the form page
+
+8.imported HttpResponse and serilizers to views.py for xml files. created a function "show_xml"  that will contiain serialised data result as an xml. created a function "show_xml_by_id" that does the same function as show_xml but can return a particular product. 
+
+9. added a URl path for the xml functions which wil be able to return a response of the xml data.
+
+10.Created function "show_json" and "show_json_by_id" which has the same purpose as the xml functions but json uses less complex data structures which makes it faster to transmit.
+
+11. added a url path for the json functions which will be able to return a repsonse of the json data
+
+
+In your opinion, which is better, XML or JSON? 
+ Based on viewing the data in postman  , I prefer JSON since its easier to read the data and it's less verbose
+
+ 
+Why is JSON more popular than XML?
+As mentioned before, the main reason JSON is considered to be more popular because of how easy it is to read for humans and its lightweight compared to XML.
+
+
+
+Explain the functional usage of is_valid() method in Django forms. Also explain why we need the method in forms.
+
+is_valid() important to check if the data submitted by the user is valid based on the fields. We need it because it ensures that valid data will be processed and to minimize errors that can be caused by the user.  
+
+
+Why do we need csrf_token when creating a form in Django? What could happen if we did not use csrf_token on a Django form? How could this be leveraged by an attacker?
+
+the csrf_token is needed when creating a form because it protects the webpage from CSRF attacks. it protects the page by creating a randomly generated token from every session and user.
+
+CSRF attacks can happen if we don't user the csrf token. the attacker could have access to the data of the user and steal it for malicious intent. 
+
+the attackers could take advantage of the lack of protection by manipulating the users into submitting request that could give them sensitive data
