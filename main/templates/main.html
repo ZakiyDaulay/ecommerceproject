@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
+<h1>TOKO HITAM</h1>
+
+<h5>NPM: </h5>
+<p>{{ NPM }}<p>
+
+<h5>Name:</h5>
+<p>{{ Name }}</p>
+
+<h5>Class:</h5>
+<p>{{ Class }}</p>
+
 {% if not products %}
 <p>There are no products in the database.</p>
 {% else %}

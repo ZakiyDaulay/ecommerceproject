@@ -26,6 +26,7 @@ def show_main(request):
         'Name_APP' : 'TOKO HITAM',
         'Name': 'Zakiy',
         'Class': 'KKI',
+        'NPM': '2306170130',
         'products':products
 
     }
