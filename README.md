@@ -74,6 +74,12 @@ Explain why we need data delivery in implementing a platform.
 
 11. added a url path for the json functions which will be able to return a repsonse of the json data
 
+screen shots of Postman
+JSON: https://imgur.com/a/kCmsiGV
+JSON with ID: https://imgur.com/a/8yEVsFn
+XML : https://imgur.com/a/DsbfUBP
+XML with ID : https://imgur.com/a/BmdP1f6
+
 
 In your opinion, which is better, XML or JSON? 
  Based on viewing the data in postman  , I prefer JSON since its easier to read the data and it's less verbose
