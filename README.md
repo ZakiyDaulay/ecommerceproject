@@ -1,3 +1,6 @@
+PWS APPLICATION:http://zakiy-makarim-ecommerceprojectassignment2.pbp.cs.ui.ac.id/
+
+
 ASSIGNNMENT 2 README
 Explain how you implemented the checklist above step-by-step (not just following the tutorial).
 First I created the django project by using various commands in the terminal, which did the following:
