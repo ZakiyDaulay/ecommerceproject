@@ -119,4 +119,23 @@ Answer the following questions in README.md in the root folder. (Modify your REA
 
  How does Django remember logged-in users? Explain other uses of cookies and whether all cookies are safe to use.
 
- Explain how did you implement the checklist step-by-step (apart from following the tutorial).
+ Explain how did you implement the checklist step-by-step
+ 1. Created a register function that will automatically generate a registration form that will create a user account
+ 2. Create the `register.html` file for the layout of the webpage of the register function
+ 3. Add a URL path for the register function in urls.py
+ 4. Created a login function that will authenticate the user to login
+ 5. Create the `login.html` file for the layout of the webpage of the login function
+ 6. Add a URL path for the login function in `urls.py`
+ 7. Created a logout function that will have a log out button so the user can log out of their account in `views.py`
+ 8. In `main.html`, add a button labelled "Logout" for the logout functin
+ 9. Add a URL path for the logout function in `urls.py`
+ 10. Add and import a login_required code on top of the show_main function in `views.py`, which will require the user to log in to their account to access the application.
+ 11. Add imports `HttpResponseRedirect`, `reverse`, and `datetime` at the very top.
+ 12. Add a `last_login` in the `login_user` function to track when the user last logged in.
+ 13. Modified the `show_main` function to have a `last_login` variable.
+ 15. Link the Products and User model with a foreignkey, making each product entry associated with the logged in user.
+ 16. run the model migration with `python manage.py makemigrations` in terminal
+ 17. select a value for the user field 
+ 18. finish the migration by running `python manage.py migrate`
+ 19. imported os and changed the `DEBUG` variable in `settings.py`
+
