@@ -112,12 +112,17 @@ the attackers could take advantage of the lack of protection by manipulating the
 Answer the following questions in README.md in the root folder. (Modify your README.md that you have already created; add a subtitle for each assignment).
 
  What is the difference between HttpResponseRedirect() and redirect()?
+redirect() is a more flexible as it can take a URL,view name or object. HttpResponseRedirect() can only take a URL.
 
  Explain how the MoodEntry model is linked with User!
-
+the MoodEntry model and User model is linked by using a foreign key. it gives the ability for each entry created to be associated with the logged-in user. 
  What is the difference between authentication and authorization, and what happens when a user logs in? Explain how Django implements these two concepts.
 
+ Authentication refers to the process of verifying the identity of the user and Authorization is the process of determining what a user can do after they're authenticated. Django uses `django.contrib.auth` for authentication by creting a session for the user and setting a session ID as a cookie in the browser. Django has a permission system to handle authorization, which assigns a user to have specififc permissions to perform actions. Django has other decorators such as @login_required and @permission_required for security.
+
  How does Django remember logged-in users? Explain other uses of cookies and whether all cookies are safe to use.
+
+ Django uses cookies and sessions to remember logged-in users. Other uses of cookies aside from managing sessions are user preferences, authentication tokens, remember me functions, tracking, etc. By default, not all cookes are safe. While cookies are generally safe, it is not perfect as they fall into the wrong hands attacks can access browsing session and steal sensitive data.
 
  Explain how did you implement the checklist step-by-step
  1. Created a register function that will automatically generate a registration form that will create a user account
