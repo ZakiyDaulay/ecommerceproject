@@ -1,7 +1,7 @@
 PWS APPLICATION:http://zakiy-makarim-ecommerceprojectassignment2.pbp.cs.ui.ac.id/
 
 
-ASSIGNNMENT 2 README
+## ASSIGNNMENT 2 README
 Explain how you implemented the checklist above step-by-step (not just following the tutorial).
 First I created the django project by using various commands in the terminal, which did the following:
 activated and setting up the django environment
@@ -48,7 +48,7 @@ it is chosen simply because it's beginner friendly, compared to other languages.
 Why is the Django model called an ORM?
 because it is the bridge between the database and python objects. software developers can use python classes in the django model instead of sql queries.
 
-ASSIGNMENT 3 README
+## ASSIGNMENT 3 README
 
 Step-by-Step Explanation:
 
@@ -105,3 +105,18 @@ the csrf_token is needed when creating a form because it protects the webpage fr
 CSRF attacks can happen if we don't user the csrf token. the attacker could have access to the data of the user and steal it for malicious intent. 
 
 the attackers could take advantage of the lack of protection by manipulating the users into submitting request that could give them sensitive data
+
+
+## ASSIGNMENT 4 README
+
+Answer the following questions in README.md in the root folder. (Modify your README.md that you have already created; add a subtitle for each assignment).
+
+ What is the difference between HttpResponseRedirect() and redirect()?
+
+ Explain how the MoodEntry model is linked with User!
+
+ What is the difference between authentication and authorization, and what happens when a user logs in? Explain how Django implements these two concepts.
+
+ How does Django remember logged-in users? Explain other uses of cookies and whether all cookies are safe to use.
+
+ Explain how did you implement the checklist step-by-step (apart from following the tutorial).
