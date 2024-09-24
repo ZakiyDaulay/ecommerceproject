@@ -14,7 +14,7 @@ from django.urls import reverse
 
 @login_required(login_url='/login')
 def show_main(request):
-    products=ProductEntry.objects.all()
+    products=ProductEntry.objects.filter(user=request.user)
     context = {
         'Name_APP' : 'TOKO HITAM',
         'Name': request.user.username,
@@ -66,11 +66,11 @@ def login_user(request):
             user = form.get_user()
             
             login(request, user)
-            response = HttpResponseRedirect(reverse("main:info_view"))
+            response = HttpResponseRedirect(reverse("main:show_main"))
             response.set_cookie('last_login', str(datetime.datetime.now()))
             if user is not None:
                 login(request, user)
-                response = HttpResponseRedirect(reverse("main:info_view"))
+                response = HttpResponseRedirect(reverse("main:show_main"))
                 response.set_cookie('last_login', str(datetime.datetime.now()))
                 return response
             return response
