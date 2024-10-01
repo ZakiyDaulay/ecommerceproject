@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Utah Condensed Bold';
+    src: url('ecommerce/static/fonts/utahbold.ttf') format('truetype'); /* Use a relative path */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Utah Condensed Bold', sans-serif; /* Set font to Utah Condensed Bold */
+    color: black; /* Set text color to black */
+}
+.navbar {
+    font-family: 'Utah Condensed Bold', sans-serif; /* Apply font to the navbar */
+}
+
+.form-style form input, 
+.form-style form textarea, 
+.form-style form select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid #bcbcbc;
+    border-radius: 0.375rem;
+}
+
+.form-style form input:focus, 
+form textarea:focus, 
+form select:focus {
+    outline: none;
+    border-color: #674ea7;
+    box-shadow: 0 0 0 3px #674ea7;
+}
+
+@keyframes shine {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.animate-shine {
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.3));
+    background-size: 200% 100%;
+    animation: shine 3s infinite;
+}
