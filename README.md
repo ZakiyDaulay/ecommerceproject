@@ -108,9 +108,6 @@ the attackers could take advantage of the lack of protection by manipulating the
 
 
 ## ASSIGNMENT 4 README
-
-Answer the following questions in README.md in the root folder. (Modify your README.md that you have already created; add a subtitle for each assignment).
-
  What is the difference between HttpResponseRedirect() and redirect()?
 redirect() is a more flexible as it can take a URL,view name or object. HttpResponseRedirect() can only take a URL.
 
@@ -143,4 +140,40 @@ the MoodEntry model and User model is linked by using a foreign key. it gives th
  17. select a value for the user field 
  18. finish the migration by running `python manage.py migrate`
  19. imported os and changed the `DEBUG` variable in `settings.py`
+
+## ASSIGNMENT 5 README
+
+if there are multiple CSS selectors for an HTML element, explain the priority order of these CSS selectors!
+
+CSS will use "specificity", which is a system that can determine which style rule has priority. the prioritiy is as follows:inline styles, ID selectors, classes, element selectors, and universal selector
+
+
+
+ Why does responsive design become an important concept in web application development? Give examples of applications that have and have not implemented responsive design!
+it's become an important concept because it gives web applications the ability to adapt to different device platforms (phones,laptops,tv,etc.). The most popular applications that have responsive design, one of them being Youtube. Because of the growing popularity of youtube, developers have to adapt youtube to different devices such as TVs and phones, and they use responsive design to make it possible. An example of applicatinos that don't use responsive design are usually older websites that haven't been updated. A good example would be the SIAKNG website by UI. when you open the website on your phone, the layout doesn't adapt properly, as the full layout doesn't cover the entire screen.
+
+
+Explain the differences between margin, border, and padding, and how to implement these three things!
+Padding is the space between the border and the content of the element. it is implemented by specifying the padding of the sides. Border is the line that separates padding from the margine by surrounding the element. implementation is done by defining the border of the sides. Margin is the space outside the border. it's the space between the elements and the surrounding elements. it is impemented by defining the sides.
+
+ Explain the concepts of flex box and grid layout along with their uses!
+ flex box and grid layouts are css layout models, used to assist developers to create responsive layouts. flexbox is one-dimensional layout model that allows the developer to align and distribute items within a container. grid layouts allow for a more complex approach, as it divides the page into rows and columns.
+
+ Explain how you implemented the checklist above step-by-step (not just following the tutorial)
+ 1. added tailwind into my application.
+ 2. created the edit_product function in `views.py`.
+ 3. created the html file for the edit_product function.
+ 4. added a url path for the function in `urls.py`
+ 5. created a delete_product function in `views.py`.
+ 6. created the html file for the delete_product function.
+ 7. added a url path for the function in `urls.py`.
+ 8. modified the html files for both so that there's a button for editing and deleting
+ 9. created a navigation bar to the application by creating `navbar.html`.
+ 10. added the burger button for the phone, so when it expands it will show the logout button.
+ 11. linked the navbar to main,create product entry, and edit mood html files by using tags. 
+ 12. added whitenoise middleware to automatically manage static files.
+ 13. created `global.css` to define the general look for the features.
+ 14. modified the html files of edit and delete product to look nice
+ 15. edited the other features of the website to look nice such as the way the products look after being added, and the login page.
+ 16. created `card_info.html` to display name, class, and npm. 
 
