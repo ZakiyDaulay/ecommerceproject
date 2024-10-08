@@ -177,3 +177,39 @@ Padding is the space between the border and the content of the element. it is im
  15. edited the other features of the website to look nice such as the way the products look after being added, and the login page.
  16. created `card_info.html` to display name, class, and npm. 
 
+## ASSIGNMENT 6 README
+
+ Explain the benefits of using JavaScript in developing web applications!
+
+ There are many benefits of using Javascript in web development. using Javascript can be faster to use as it runs directly in the user's browser. this means that various forms of interaction in the program will happen instantly as it doesn't require any server communication. AJAX is also very useful and beneficial as it enables asynchronous data fetching, which can request ddata from a server without reloading the page. 
+
+
+ Explain why we need to use await when we call fetch()! What would happen if we don't use await?
+
+
+calling fetch() is an asynchornous function that essentially returns a 'promise', which represents a forthcoming result. Sometimes, calling a fetch() can be unsuccessful, as fetch() can run and still be in progress of requesting, while the code is running in the background which can cause problems. using await will pause the execution of the code until the promise is returned by fetch(), ensuring that we get the correct response. 
+
+
+ Why do we need to use the csrf_exempt decorator on the view used for AJAX POST?
+
+
+
+like the title of the decorator, it's used to exempt a view from the csrf protection. Django has CSRF protection on all of its POST requests (including AJAX POST requests) by default for security purpose. if the CSRF protections are applied on the AJAX requests, the tokens might not be correctly handled which can lead to errors. 
+
+ On this week's tutorial, the user input sanitization is done in the back-end as well. Why can't the sanitization be done just in the front-end?
+
+
+If the user input sanitization is done in the front-end, it can lead to serious security issues.  if it were in the front-end, the code can be easily modified by the users, most commonly done by inspecting the website. they could change the code and logic of the sanitization, which can lead to malicious data sent to your server.
+
+
+Explain how you implemented the checklist above step-by-step
+1. modified the `login_user` function so that an error message will display of the username or password is invalid.
+2. created a new function in `views.py` called  add `add_product_entry_by_ajax` that has a CSRF_EXEMPT decorator so that it won't check the CSRF_token in the post request. 
+3. routed the new function in `urls.py`.
+4. modified `views.py` and `main.html` so that the product entry objects are fetched from the /json endpoint. 
+5. added a new div element that will become the container for the product entries.. 
+6. created a new function called `refreshProductEntries` in `main.html` that will refresh the products data asynchronously
+7. implemented the modal in `main.html` 
+8. added a javascript function called `addProductEntry` that can add data bsed on the input in an AJAX
+9. added `strip_tags` in `forms.py` and `views.py`, a function that will remove all HTML that are in the data sent by the user. This is done as a security measure against XSS.
+10. used DOMPurify to clean up data on the frontend side, by implementing it in the `refreshProductEntris` function, and in the `main.html` file.
