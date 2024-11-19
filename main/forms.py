@@ -1,5 +1,4 @@
 from django.forms import ModelForm
-from django.forms import ModelForm
 from main.models import ProductEntry
 
 from django.utils.html import strip_tags
